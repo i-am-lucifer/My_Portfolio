@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <main>
       <nav className="nav">
-        <a href="#home" className="brand">LOGESH</a>
+        <a href="#home" className="brand">Logeshwaran I</a>
         <div className="navLinks">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
@@ -65,16 +65,10 @@ export default function Home() {
 
       <section id="home" className="hero section">
         <div className="heroCopy">
-          <div className="kicker">Portfolio / 2026</div>
           <h1>Strategy & Business Operations for the AI era.</h1>
           <p>
             I help leadership teams turn operational complexity into faster decisions using data, automation and AI-enabled workflows.
           </p>
-          <div className="heroBadges">
-            <span>Currently @ Apple Singapore</span>
-            <span>MBA + MSc Data Analytics</span>
-            <span>Open to Europe roles</span>
-          </div>
           <div className="ctaRow">
             <a className="button primary" href="#projects">View case studies</a>
             <a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf">Download CV</a>

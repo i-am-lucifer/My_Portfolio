@@ -43,7 +43,7 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
-.brand { font-weight: 950; letter-spacing: -0.04em; font-size: 18px; }
+.brand { font-weight: 950; letter-spacing: -0.04em; font-size: 18px; white-space: nowrap; }
 .navLinks { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
 .navLinks a:hover { color: var(--ink); }
 
@@ -69,9 +69,9 @@ a { color: inherit; text-decoration: none; }
 .kicker.dark { color: rgba(255,255,255,0.62); }
 h1, h2, h3, p { margin-top: 0; }
 h1 {
-  font-size: clamp(52px, 8vw, 112px);
-  line-height: 0.88;
-  letter-spacing: -0.085em;
+  font-size: clamp(44px, 6.8vw, 92px);
+  line-height: 0.96;
+  letter-spacing: -0.07em;
   margin: 22px 0 28px;
 }
 h2 {
