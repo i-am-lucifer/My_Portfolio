@@ -26,44 +26,59 @@ export default function AnalyticsTracker() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
+    const pageProperties = () => ({
+      $current_url: window.location.href,
+      path: window.location.pathname,
+      title: document.title,
+      referrer: document.referrer || 'direct',
+    });
+
     const loadPostHog = () => {
       if (!analyticsConfig.posthogKey || window.posthog) return;
 
       const script = document.createElement('script');
       script.async = true;
       script.src = `${analyticsConfig.posthogHost}/static/array.js`;
+
       script.onload = () => {
         if (!window.posthog) return;
+
         window.posthog.init(analyticsConfig.posthogKey, {
           api_host: analyticsConfig.posthogHost,
           person_profiles: 'identified_only',
           capture_pageview: false,
           persistence: 'localStorage+cookie',
         });
+
+        // Required for PostHog Web Analytics dashboard
+        capture('$pageview', pageProperties());
+
+        // Your custom portfolio event
         capture('portfolio_page_view', {
-          path: window.location.pathname,
-          title: document.title,
-          referrer: document.referrer || 'direct',
+          ...pageProperties(),
+          source: 'portfolio',
+          version: '2026',
         });
       };
+
       document.head.appendChild(script);
     };
 
     loadPostHog();
 
     if (!analyticsConfig.posthogKey) {
-      debug('portfolio_page_view', {
-        path: window.location.pathname,
-        title: document.title,
-        referrer: document.referrer || 'direct',
-      });
+      debug('portfolio_page_view', pageProperties());
     }
 
     const clickHandler = (event) => {
       const target = event.target.closest('[data-track]');
       if (!target) return;
+
       capture(target.getAttribute('data-track'), {
-        label: target.textContent?.trim() || target.getAttribute('aria-label') || 'unlabelled',
+        label:
+          target.textContent?.trim() ||
+          target.getAttribute('aria-label') ||
+          'unlabelled',
         href: target.getAttribute('href') || null,
         section: target.closest('section')?.id || 'global',
       });
@@ -73,6 +88,7 @@ export default function AnalyticsTracker() {
 
     const sections = Array.from(document.querySelectorAll('section[id]'));
     const seenSections = new Set();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -90,8 +106,10 @@ export default function AnalyticsTracker() {
     sections.forEach((section) => observer.observe(section));
 
     const video = document.querySelector('.heroVideo');
+
     const onPlay = () => capture('hero_video_played');
     const onEnded = () => capture('hero_video_completed');
+
     if (video) {
       video.addEventListener('play', onPlay, { once: true });
       video.addEventListener('ended', onEnded);
@@ -100,6 +118,7 @@ export default function AnalyticsTracker() {
     return () => {
       document.removeEventListener('click', clickHandler);
       observer.disconnect();
+
       if (video) {
         video.removeEventListener('play', onPlay);
         video.removeEventListener('ended', onEnded);
