@@ -1,3 +1,5 @@
+import AnalyticsTracker from './AnalyticsTracker';
+
 const metrics = [
   ['6+', 'Years across business operations, analytics and transformation'],
   ['8', 'APAC markets supported through regional operating rhythms'],
@@ -53,13 +55,14 @@ const skills = [
 export default function Home() {
   return (
     <main>
+      <AnalyticsTracker />
       <nav className="nav">
         <a href="#home" className="brand">Logeshwaran I</a>
         <div className="navLinks">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-track="nav_about">About</a>
+          <a href="#experience" data-track="nav_experience">Experience</a>
+          <a href="#projects" data-track="nav_projects">Projects</a>
+          <a href="#contact" data-track="nav_contact">Contact</a>
         </div>
       </nav>
 
@@ -70,8 +73,8 @@ export default function Home() {
             I help leadership teams turn operational complexity into faster decisions using data, automation and AI-enabled workflows.
           </p>
           <div className="ctaRow">
-            <a className="button primary" href="#projects">View case studies</a>
-            <a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf">Download CV</a>
+            <a className="button primary" href="#projects" data-track="click_view_case_studies">View case studies</a>
+            <a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf" data-track="click_download_cv">Download CV</a>
           </div>
         </div>
 
@@ -187,12 +190,12 @@ export default function Home() {
       </section>
 
       <section id="contact" className="section contact">
-        <p className="kicker">Next phase: analytics + AI chatbot</p>
+        <p className="kicker">Phase 2: analytics enabled</p>
         <h2>Let’s build smarter business operations.</h2>
         <p>Open to conversations with strategy, operations, product, data and AI transformation teams.</p>
         <div className="ctaRow center">
-          <a className="button primary" href="mailto:your.email@example.com">Email me</a>
-          <a className="button secondary" href="https://www.linkedin.com/in/logeshwaran-inbaraj/">LinkedIn</a>
+          <a className="button primary" href="mailto:your.email@example.com" data-track="click_email">Email me</a>
+          <a className="button secondary" href="https://www.linkedin.com/in/logeshwaran-inbaraj/" data-track="click_linkedin">LinkedIn</a>
         </div>
       </section>
     </main>

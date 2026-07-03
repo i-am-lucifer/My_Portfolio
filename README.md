@@ -1,31 +1,40 @@
-# Logeshwaran Portfolio 2026 — Phase 1 Visual Redesign
+# Logeshwaran I Portfolio — Phase 2
 
-Next.js portfolio configured for GitHub Pages and redesigned with a white executive/Canva-style visual direction.
+White premium Next.js portfolio for GitHub Pages.
 
-## Deploy with GitHub UI
+## Phase 2 added
 
-1. Upload all files in this folder to the root of your `My_Portfolio` repository.
-2. Go to Settings > Pages.
-3. Set Source to `GitHub Actions`.
-4. Commit/push any file change.
-5. Wait for Actions to finish.
+- Client-side analytics tracker
+- PostHog-ready configuration
+- Page view tracking
+- Section view tracking
+- CV download tracking
+- LinkedIn/email/button click tracking
+- Hero video play/completion tracking
 
-Live URL:
-https://i-am-lucifer.github.io/My_Portfolio/
+## Setup analytics
+
+1. Create a free PostHog project.
+2. Copy the Project API Key.
+3. Open `app/analytics-config.js`.
+4. Paste the key here:
+
+```js
+posthogKey: 'phc_your_key_here'
+```
+
+5. Commit the change.
+
+PostHog project API keys are public browser keys, not private OpenAI-style secrets.
 
 ## Hero video
 
-Upload your video to:
+Upload your video as:
 
-`public/hero-video.mp4`
+```text
+public/hero-video.mp4
+```
 
-Optional poster image:
+## Deploy
 
-`public/video-poster.png`
-
-## Edit placeholders
-
-- `app/page.jsx`: email, CV filename, project copy, metrics.
-- `public/`: add CV/video/assets.
-
-Phase 2 can add analytics. Phase 3 can add the AI chatbot.
+GitHub Pages source should be set to **GitHub Actions**.
