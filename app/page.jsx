@@ -8,9 +8,9 @@ const metrics = [
 ];
 
 const pillars = [
-  ['Business Strategy', 'Sales operations, commercial planning, governance rhythms and executive decision support.'],
-  ['Data Intelligence', 'SQL, Python, forecasting, performance dashboards and insight storytelling.'],
-  ['AI Automation', 'LLM workflows, AI agents, automation design and decision intelligence systems.'],
+  ['Business Operations Strategy', 'Business reviews, operating rhythms, KPI governance, commercial planning and cross-functional alignment.'],
+  ['Decision Intelligence', 'Transforming operational data into insights, recommendations and leadership narratives.'],
+  ['AI Transformation', 'Designing AI-enabled workflows that reduce manual effort and improve decision velocity.'],
 ];
 
 const projects = [
@@ -38,18 +38,19 @@ const projects = [
 ];
 
 const journey = [
-  ['Software', 'Built technical foundations across web, data and automation.'],
-  ['Data', 'Moved from raw information to business interpretation and decision support.'],
-  ['MBA + MSc', 'Combined strategy, analytics and commercial problem-solving.'],
+  ['Software Engineering', 'Built foundations in technology, automation and scalable systems.'],
+  ['MBA', 'Combined business acumen, technology and commercial problem-solving.'],
+  ['Data Analytics', 'Moved from raw information to business interpretation and decision support.'],
+  ['MSc', 'Combined business acumen, strategy, analytics and commercial problem-solving.'],
   ['Apple Ops', 'Supported APAC operating rhythms, business reviews and regional governance.'],
   ['AI Strategy', 'Building AI-powered workflows that reduce manual effort and improve decision velocity.'],
 ];
 
 const skills = [
-  ['Strategy & Operations', ['Business Operations', 'Commercial Planning', 'Stakeholder Governance', 'Executive Reviews']],
-  ['Data & Analytics', ['SQL', 'Python', 'Forecasting', 'Dashboards', 'Performance Analytics']],
-  ['AI & Automation', ['LLM Workflows', 'AI Agents', 'Prompt Engineering', 'Automation Design']],
-  ['Platforms & Tools', ['Excel', 'Tableau', 'PowerPoint', 'GitHub', 'Workflow Automation']],
+  ['Strategy & Operations', ['Business Reviews','Executive Decision Support','Stakeholder Management','Performance Management','Commercial Strategy']],
+  ['Data & Analytics', ['SQL', 'Python', 'Dashboards', 'Performance Analytics', 'Predictive Analytics']],
+  ['AI & Automation', ['LLM Workflows', 'AI Agents', 'Prompt Engineering', 'Automation Design', 'AI Orchestration']],
+  ['Platforms & Tools', ['Excel', 'Tableau', 'PowerPoint', 'GitHub', 'Claude Code']],
 ];
 
 export default function Home() {
@@ -70,7 +71,7 @@ export default function Home() {
         <div className="heroCopy">
           <h1>Strategy & Business Operations for the AI era.</h1>
           <p>
-            I help leadership teams turn operational complexity into faster decisions using data, automation and AI-enabled workflows.
+            I help leadership teams improve decision speed, operational visibility and business performance by combining strategy, analytics and AI automation.
           </p>
           <div className="ctaRow">
             <a className="button primary" href="#projects" data-track="click_view_case_studies">View case studies</a>
@@ -99,9 +100,9 @@ export default function Home() {
       </section>
 
       <section id="about" className="section introBlock">
-        <div className="sectionLabel">01 / About</div>
+        <div className="sectionLabel">About</div>
         <div className="sectionTitle">
-          <h2>Business context with technical execution.</h2>
+          <h2>Business strategy powered by analytical depth and AI execution.</h2>
           <p>My work sits at the intersection of strategy, operating discipline, analytics and AI transformation.</p>
         </div>
         <div className="pillarGrid">
@@ -115,7 +116,7 @@ export default function Home() {
       </section>
 
       <section id="experience" className="section experience">
-        <div className="sectionLabel">02 / Experience</div>
+        <div className="sectionLabel">Experience</div>
         <div className="experiencePanel">
           <div>
             <p className="kicker dark">Apple APAC operating dashboard</p>
@@ -137,7 +138,7 @@ export default function Home() {
 
       <section className="section timelineSection">
         <div className="sectionLabel">03 / Journey</div>
-        <h2>Software → Data → Business Operations → AI Transformation</h2>
+        <h2>Software → Analytics → Bizops → AI </h2>
         <div className="timeline">
           {journey.map(([title, text]) => (
             <article className="timelineItem" key={title}>
@@ -149,7 +150,7 @@ export default function Home() {
       </section>
 
       <section id="projects" className="section projects">
-        <div className="sectionLabel">04 / Selected systems</div>
+        <div className="sectionLabel">Business Impacts</div>
         <div className="sectionTitle">
           <h2>Projects as business case studies.</h2>
           <p>Less code showcase. More problems solved, workflows improved and decisions accelerated.</p>
