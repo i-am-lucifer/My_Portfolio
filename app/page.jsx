@@ -81,7 +81,7 @@ const projects = [
   },
   {
     number: '03',
-    title: 'Predictive Customer Growth Intelligence',
+    title: 'Predictive Customer Intelligence',
     challenge: 'Marketing teams needed a scalable method to identify high-value customers and optimize campaign investment.',
     solution: 'Developed a predictive model identifying 1.3M likely buyers from 10M customers, reducing campaign spend by 40–50%.',
     stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'],
@@ -133,11 +133,11 @@ export default function Home() {
         <div className="heroCopy">
           <h1>Strategy & Business Operations for the AI era.</h1>
           <p>
-            I help leadership teams improve decision speed, operational visibility and business performance by combining strategy, analytics and AI automation.
+            I bridge business strategy, data intelligence and AI automation to solve operational challenges, uncover insights and enable faster, more informed leadership decisions.
           </p>
           <div className="ctaRow">
             <a className="button primary" href="#projects" data-track="click_view_case_studies">View business impacts</a>
-            <a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf" data-track="click_download_cv">Download CV</a>
+            /*<a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf" data-track="click_download_cv">Download CV</a>*/
           </div>
         </div>
 
@@ -164,8 +164,8 @@ export default function Home() {
       <section id="about" className="section introBlock">
         <div className="sectionLabel">About</div>
         <div className="sectionTitle">
-          <h2>Business strategy powered by analytical depth and AI execution.</h2>
-          <p>My work sits at the intersection of strategy, operating discipline, analytics and AI transformation.</p>
+          <h2>Business Strategy powered by Analytical depth and AI execution.</h2>
+          <p>My work sits at the intersection of Strategy, Operating Discipline, Analytics and AI Transformation.</p>
         </div>
         <div className="pillarGrid">
           {pillars.map(([title, text]) => (
@@ -233,7 +233,7 @@ export default function Home() {
 
       <section className="section timelineSection">
         <div className="sectionLabel">Journey</div>
-        <h2>Software → Analytics → Operations → AI Strategy</h2>
+        <h2>Software → Analytics → Operations → AI </h2>
         <div className="timeline">
           {journey.map(([title, text]) => (
             <article className="timelineItem" key={title}>
@@ -281,7 +281,7 @@ export default function Home() {
           <div className="sectionLabel">Global mobility</div>
           <h2>India → Ireland → Singapore</h2>
         </div>
-        <p></p>
+        <p>Building a global perspective across technology, analytics and business operations — combining engineering foundations from India, advanced data science experience from Ireland and regional business execution across APAC markets from Singapore.</p>
       </section>
 
       <section id="contact" className="section contact">
