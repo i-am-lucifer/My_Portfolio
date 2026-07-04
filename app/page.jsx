@@ -137,7 +137,6 @@ export default function Home() {
           </p>
           <div className="ctaRow">
             <a className="button primary" href="#projects" data-track="click_view_case_studies">View business impacts</a>
-            /*<a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf" data-track="click_download_cv">Download CV</a>*/
           </div>
         </div>
 
