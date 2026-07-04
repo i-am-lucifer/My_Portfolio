@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import AnalyticsTracker from './AnalyticsTracker';
 
 const metrics = [
@@ -11,6 +14,54 @@ const pillars = [
   ['Business Operations', 'Business Reviews, Operating Rhythms, KPI Governance and cross-functional alignment.'],
   ['Decision Intelligence', 'Transforming Operational data into Insights, Recommendations and Leadership Narratives.'],
   ['AI Transformation', 'Designing AI-enabled workflows reducing Manual Effort and improve Decision Velocity.'],
+];
+
+const experiences = [
+  {
+    company: 'Apple',
+    role: 'Business Operations Analyst – APAC Retail Customer Care',
+    location: 'Singapore',
+    period: 'Aug 2025 – Present',
+    summary:
+      'Strategic business partner to regional leadership, delivering operational intelligence, commercial insights and AI-enabled decision support across APAC Retail Customer Care.',
+    metrics: ['8 APAC Markets', '10+ Stakeholders', '96% Reporting Time Reduction'],
+    highlights: [
+      'Own RPAC Sales Weekly and Quarterly Business Reviews across 8 APAC markets.',
+      'Partner with Sales, Workforce Planning and Vendor Management to analyze demand trends, utilization and commercial performance.',
+      'Built AI-enabled reporting automation using Python, Snowflake, Tableau and enterprise AI.',
+      'Supported NPI, Apple Shopping Events and Back-to-School campaign readiness.',
+    ],
+  },
+  {
+    company: 'Tredence',
+    role: 'Data Analytics Consultant – Walmart Marketing Analytics',
+    location: 'Bengaluru, India',
+    period: 'Jun 2021 – Aug 2023',
+    summary:
+      'Enabled Walmart marketing leadership with predictive analytics, customer intelligence and campaign performance insights to improve customer growth and investment decisions.',
+    metrics: ['10M Customers', '1.3M Likely Buyers', '40–50% Spend Reduction'],
+    highlights: [
+      'Analyzed customer behavior across Walmart+ and non-member segments.',
+      'Advised marketing leadership on campaign performance, retention, revenue and AOV.',
+      'Developed predictive targeting model with 72% accuracy.',
+      'Mentored two analysts across multiple business initiatives.',
+    ],
+  },
+  {
+    company: 'Accenture',
+    role: 'Application Development Associate – Telecommunications Client',
+    location: 'Chennai, India',
+    period: 'Oct 2015 – Feb 2018',
+    summary:
+      'Improved operational efficiency through automation, reporting accuracy and workflow optimization for a telecommunications client.',
+    metrics: ['90% Reporting Accuracy', '4 Hours Saved', 'Python Automation'],
+    highlights: [
+      'Automated operational reporting using Python.',
+      'Improved reporting accuracy to approximately 90%.',
+      'Reduced operational turnaround time by approximately 4 hours.',
+      'Built strong foundation in systems, process improvement and automation.',
+    ],
+  },
 ];
 
 const projects = [
@@ -33,30 +84,41 @@ const projects = [
     title: 'Predictive Customer Growth Intelligence',
     challenge: 'Marketing teams needed a scalable method to identify high-value customers and optimize campaign investment.',
     solution: 'Developed a predictive model identifying 1.3M likely buyers from 10M customers, reducing campaign spend by 40–50%.',
-    stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'
-  ],
+    stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'],
   },
 ];
 
 const journey = [
   ['Software Engineering', 'Built foundations in technology, automation and scalable systems.'],
   ['MBA Operations & Analytics', 'Combined business acumen and translated data into executive recommendations.'],
-  ['Masters in Data Science','Deepened expertise in machine learning, analytics systems and AI applications.'],
+  ['Masters in Data Science', 'Deepened expertise in machine learning, analytics systems and AI applications.'],
   ['Business Operations', 'Supporting operating rhythms, commercial governance and leadership decisions.'],
   ['AI Transformation & Strategy', 'Building AI-powered workflows that reduce manual effort and improve decision velocity.'],
 ];
 
 const skills = [
-  ['Strategy & Operations', ['Business Reviews','Executive Decision Support','Stakeholder Management','Performance Management','Commercial Strategy']],
+  ['Strategy & Operations', ['Business Reviews', 'Executive Decision Support', 'Stakeholder Management', 'Performance Management', 'Commercial Strategy']],
   ['Data & Analytics', ['SQL', 'Python', 'Dashboards', 'Performance Analytics', 'Predictive Analytics']],
   ['AI & Automation', ['LLM Workflows', 'AI Agents', 'Prompt Engineering', 'Automation Design', 'AI Orchestration']],
   ['Platforms & Tools', ['Excel', 'Tableau', 'PowerPoint', 'GitHub', 'Claude Code']],
 ];
 
 export default function Home() {
+  const [activeExperience, setActiveExperience] = useState(0);
+  const experience = experiences[activeExperience];
+
+  const previousExperience = () => {
+    setActiveExperience((current) => (current === 0 ? experiences.length - 1 : current - 1));
+  };
+
+  const nextExperience = () => {
+    setActiveExperience((current) => (current === experiences.length - 1 ? 0 : current + 1));
+  };
+
   return (
     <main>
       <AnalyticsTracker />
+
       <nav className="nav">
         <a href="#home" className="brand">Logeshwaran I</a>
         <div className="navLinks">
@@ -79,7 +141,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="videoWrap" aria-label="Hero portfolio video placeholder">
+        <div className="videoWrap" aria-label="Hero portfolio video">
           <video className="heroVideo" autoPlay muted loop playsInline poster="./video-poster.png">
             <source src="./hero-video.mp4" type="video/mp4" />
           </video>
@@ -117,22 +179,55 @@ export default function Home() {
 
       <section id="experience" className="section experience">
         <div className="sectionLabel">Experience</div>
-        <div className="experiencePanel">
-          <div>
-            <p className="kicker dark">Apple APAC operating dashboard</p>
-            <h2>From dashboards to decisions.</h2>
-            <p>
-              I support regional leadership by translating operational signals across APAC markets into executive insights, governance rhythms and commercial recommendations.
-            </p>
-          </div>
-          <div className="dashboard">
-            {['Business Reviews', 'Market Performance', 'Demand Trends', 'Workforce Planning', 'Vendor Governance'].map((item, index) => (
-              <div className="dashRow" key={item}>
-                <span>{item}</span>
-                <div className="bar"><i style={{ width: `${72 + index * 5}%` }} /></div>
+
+        <div className="experienceCarousel">
+          <button className="experienceArrow left" onClick={previousExperience} data-track="experience_previous" aria-label="Previous experience">
+            ‹
+          </button>
+
+          <article className="experienceCard">
+            <div className="experienceTop">
+              <div>
+                <p className="experienceCompany">{experience.company}</p>
+                <h2>{experience.role}</h2>
+                <p className="experienceMeta">{experience.location} | {experience.period}</p>
               </div>
-            ))}
-          </div>
+              <div className="experienceCounter">
+                {String(activeExperience + 1).padStart(2, '0')} / {String(experiences.length).padStart(2, '0')}
+              </div>
+            </div>
+
+            <p className="experienceSummary">{experience.summary}</p>
+
+            <div className="experienceMetrics">
+              {experience.metrics.map((metric) => (
+                <span key={metric}>{metric}</span>
+              ))}
+            </div>
+
+            <div className="experienceHighlights">
+              {experience.highlights.map((highlight) => (
+                <p key={highlight}>{highlight}</p>
+              ))}
+            </div>
+          </article>
+
+          <button className="experienceArrow right" onClick={nextExperience} data-track="experience_next" aria-label="Next experience">
+            ›
+          </button>
+        </div>
+
+        <div className="companyTabs">
+          {experiences.map((item, index) => (
+            <button
+              key={item.company}
+              className={activeExperience === index ? 'active' : ''}
+              onClick={() => setActiveExperience(index)}
+              data-track={`experience_${item.company.toLowerCase()}`}
+            >
+              {item.company}
+            </button>
+          ))}
         </div>
       </section>
 
@@ -186,11 +281,10 @@ export default function Home() {
           <div className="sectionLabel">Global mobility</div>
           <h2>India → Ireland → Singapore</h2>
         </div>
-        <p> </p>
+        <p></p>
       </section>
 
       <section id="contact" className="section contact">
-        <p className="kicker"></p>
         <h2>Let’s build smarter businesses.</h2>
         <p>Open to conversations with Strategy, Operations, Product, Data and AI Transformation teams.</p>
         <div className="ctaRow center">
