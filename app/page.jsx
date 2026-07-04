@@ -2,9 +2,9 @@ import AnalyticsTracker from './AnalyticsTracker';
 
 const metrics = [
   ['6+', 'Years across Business Operations, Strategy, Analytics and Digital Transformation'],
-  ['8', 'APAC markets supported through regional operational performance'],
-  ['10+', 'Regional stakeholders across sales, planning and governance'],
-  ['50+', 'Hours saved through Automation and AI-enabled workflows'],
+  ['8', 'APAC markets supported through regional Operational Performance'],
+  ['10+', 'Regional stakeholders across Sales, Planning, Training and Governance'],
+  ['96%', 'Reduction in Executive Reporting time through AI and Workflow Automation'],
 ];
 
 const pillars = [
