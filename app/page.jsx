@@ -26,14 +26,14 @@ const projects = [
     title: 'Sales Operations Dashboard',
     challenge: 'Market signals, demand patterns and performance indicators were distributed across multiple sources.',
     solution: 'Created leadership-ready dashboards connecting regional performance with operating priorities.',
-    stack: ['SQL', 'Tableau', 'Forecasting', 'Commercial Ops'],
+    stack: ['SQL', 'Tableau', 'Cloud', 'KPI Governance', 'Commercial Ops'],
   },
   {
     number: '03',
     title: 'Predictive Customer Growth Intelligence',
     challenge: 'Marketing teams needed a scalable way to identify high-value customers and optimize campaign investments across millions of users.',
     solution: 'Developed a predictive analytics model using customer purchasing behaviour to identify 1.3M high-probability buyers from 10M customers, improving targeting efficiency and reducing campaign spend by 40–50%.',
-    stack: ['Predictive Analytics', 'Machine Learning', 'Customer Strategy', 'Marketing Analytics', 'Decision Intelligence'
+    stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'
   ],
   },
 ];
@@ -41,9 +41,9 @@ const projects = [
 const journey = [
   ['Software Engineering', 'Built foundations in technology, automation and scalable systems.'],
   ['MBA Operations & Analytics', 'Combined business acumen and translated data into executive recommendations.'],
-  ['MSc Data Science','Deepened expertise in machine learning, analytics systems and AI applications.'],
-  ['Biz Ops', 'Supporting operating rhythms, commercial governance and leadership decisions.'],
-  ['AI Strategy', 'Building AI-powered workflows that reduce manual effort and improve decision velocity.'],
+  ['Masters in Data Science','Deepened expertise in machine learning, analytics systems and AI applications.'],
+  ['Business Operations', 'Supporting operating rhythms, commercial governance and leadership decisions.'],
+  ['AI Transformation & Strategy', 'Building AI-powered workflows that reduce manual effort and improve decision velocity.'],
 ];
 
 const skills = [
@@ -137,8 +137,8 @@ export default function Home() {
       </section>
 
       <section className="section timelineSection">
-        <div className="sectionLabel">03 / Journey</div>
-        <h2>Software → Analytics → Bizops → AI </h2>
+        <div className="sectionLabel">Journey</div>
+        <h2>Software → Analytics → Operations → AI Strategy</h2>
         <div className="timeline">
           {journey.map(([title, text]) => (
             <article className="timelineItem" key={title}>
@@ -171,7 +171,7 @@ export default function Home() {
       </section>
 
       <section id="skills" className="section skills">
-        <div className="sectionLabel">05 / Capability architecture</div>
+        <div className="sectionLabel">Competencies</div>
         <div className="skillsGrid">
           {skills.map(([group, items]) => (
             <div className="skillCard" key={group}>
@@ -184,18 +184,18 @@ export default function Home() {
 
       <section className="section mobility">
         <div>
-          <div className="sectionLabel">06 / Global mobility</div>
-          <h2>Singapore → Ireland → India → Europe</h2>
+          <div className="sectionLabel">Global mobility</div>
+          <h2>India → Ireland → Singapore</h2>
         </div>
-        <p>Available for English-speaking Strategy Ops, Business Operations, Product/Data Analytics and AI Transformation roles across Ireland, Netherlands, Poland and wider Europe.</p>
+        <p> </p>
       </section>
 
       <section id="contact" className="section contact">
-        <p className="kicker">Phase 2: analytics enabled</p>
-        <h2>Let’s build smarter business operations.</h2>
-        <p>Open to conversations with strategy, operations, product, data and AI transformation teams.</p>
+        <p className="kicker"></p>
+        <h2>Let’s build smarter businesses.</h2>
+        <p>Open to conversations with Strategy, Operations, Product, Data and AI Transformation teams.</p>
         <div className="ctaRow center">
-          <a className="button primary" href="mailto:your.email@example.com" data-track="click_email">Email me</a>
+          <a className="button primary" href="mailto:messagelogesh@gmail.com" data-track="click_email">Email me</a>
           <a className="button secondary" href="https://www.linkedin.com/in/logeshwaran-inbaraj/" data-track="click_linkedin">LinkedIn</a>
         </div>
       </section>
