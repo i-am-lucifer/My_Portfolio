@@ -17,22 +17,22 @@ const projects = [
   {
     number: '01',
     title: 'Executive Business Review Automation',
-    challenge: 'Manual reporting cycles slowed insight generation for leadership reviews.',
-    solution: 'Built AI-enabled workflows that turn business signals into concise narratives, variance explanations and next-action prompts.',
+    challenge: 'Leadership reporting required manual consolidation of performance data, market signals and business commentary.',
+    solution: 'Built AI-enabled workflows that generate concise narratives, variance explanations and action prompts for recurring executive reviews.',
     stack: ['Python', 'SQL', 'LLMs', 'Automation', 'Executive Reporting'],
   },
   {
     number: '02',
     title: 'Sales Operations Dashboard',
-    challenge: 'Market signals, demand patterns and performance indicators were distributed across multiple sources.',
-    solution: 'Created leadership-ready dashboards connecting regional performance with operating priorities.',
+    challenge: 'Sales performance, demand trends and operating indicators were spread across multiple regional data sources.',
+    solution: 'Created leadership-ready intelligence dashboards linking market performance, operating priorities and planning conversations.',
     stack: ['SQL', 'Tableau', 'Cloud', 'KPI Governance', 'Commercial Ops'],
   },
   {
     number: '03',
     title: 'Predictive Customer Growth Intelligence',
-    challenge: 'Marketing teams needed a scalable way to identify high-value customers and optimize campaign investments across millions of users.',
-    solution: 'Developed a predictive analytics model using customer purchasing behaviour to identify 1.3M high-probability buyers from 10M customers, improving targeting efficiency and reducing campaign spend by 40–50%.',
+    challenge: 'Marketing teams needed a scalable method to identify high-value customers and optimize campaign investment.',
+    solution: 'Developed a predictive model identifying 1.3M likely buyers from 10M customers, reducing campaign spend by 40–50%.',
     stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'
   ],
   },
