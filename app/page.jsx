@@ -284,7 +284,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="section contact">
-        <h2>Let’s build smarter businesses.</h2>
+        <h2>Let’s build smarter business solutions.</h2>
         <p>Open to conversations with Strategy, Operations, Product, Data and AI Transformation teams.</p>
         <div className="ctaRow center">
           <a className="button primary" href="mailto:messagelogesh@gmail.com" data-track="click_email">Email me</a>
