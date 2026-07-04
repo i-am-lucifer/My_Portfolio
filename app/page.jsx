@@ -74,7 +74,7 @@ export default function Home() {
             I help leadership teams improve decision speed, operational visibility and business performance by combining strategy, analytics and AI automation.
           </p>
           <div className="ctaRow">
-            <a className="button primary" href="#projects" data-track="click_view_case_studies">View case studies</a>
+            <a className="button primary" href="#projects" data-track="click_view_case_studies">View business impacts</a>
             <a className="button secondary" href="./Logeshwaran-Inbaraj-CV.pdf" data-track="click_download_cv">Download CV</a>
           </div>
         </div>
@@ -152,8 +152,7 @@ export default function Home() {
       <section id="projects" className="section projects">
         <div className="sectionLabel">Business Impacts</div>
         <div className="sectionTitle">
-          <h2>Projects as business case studies.</h2>
-          <p>Less code showcase. More problems solved, workflows improved and decisions accelerated.</p>
+          <h2>Business Impacts.</h2>
         </div>
         <div className="projectGrid">
           {projects.map((project) => (
