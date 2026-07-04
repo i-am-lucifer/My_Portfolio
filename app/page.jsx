@@ -4,13 +4,13 @@ const metrics = [
   ['6+', 'Years across Business Operations, Strategy, Analytics and Digital Transformation'],
   ['8', 'APAC markets supported through regional operational performance'],
   ['10+', 'Regional stakeholders across sales, planning and governance'],
-  ['100+', 'Hours saved through Automation and AI-enabled workflows'],
+  ['50+', 'Hours saved through Automation and AI-enabled workflows'],
 ];
 
 const pillars = [
-  ['Business Operations Strategy', 'Business reviews, operating rhythms, KPI governance, commercial planning and cross-functional alignment.'],
-  ['Decision Intelligence', 'Transforming operational data into insights, recommendations and leadership narratives.'],
-  ['AI Transformation', 'Designing AI-enabled workflows that reduce manual effort and improve decision velocity.'],
+  ['Business Operations', 'Business Reviews, Operating Rhythms, KPI Governance and cross-functional alignment.'],
+  ['Decision Intelligence', 'Transforming Operational data into Insights, Recommendations and Leadership Narratives.'],
+  ['AI Transformation', 'Designing AI-enabled workflows reducing Manual Effort and improve Decision Velocity.'],
 ];
 
 const projects = [
@@ -23,26 +23,26 @@ const projects = [
   },
   {
     number: '02',
-    title: 'APAC Sales Operations Dashboard',
+    title: 'Sales Operations Dashboard',
     challenge: 'Market signals, demand patterns and performance indicators were distributed across multiple sources.',
     solution: 'Created leadership-ready dashboards connecting regional performance with operating priorities.',
     stack: ['SQL', 'Tableau', 'Forecasting', 'Commercial Ops'],
   },
   {
     number: '03',
-    title: 'Workforce & Vendor Planning Engine',
-    challenge: 'Planning conversations needed better visibility into demand, utilisation and vendor performance.',
-    solution: 'Connected operational metrics into a structured governance view for business planning discussions.',
-    stack: ['Analytics', 'Planning', 'Stakeholder Mgmt', 'Ops Strategy'],
+    title: 'Predictive Customer Growth Intelligence',
+    challenge: 'Marketing teams needed a scalable way to identify high-value customers and optimize campaign investments across millions of users.',
+    solution: 'Developed a predictive analytics model using customer purchasing behaviour to identify 1.3M high-probability buyers from 10M customers, improving targeting efficiency and reducing campaign spend by 40–50%.',
+    stack: ['Predictive Analytics', 'Machine Learning', 'Customer Strategy', 'Marketing Analytics', 'Decision Intelligence'
+  ],
   },
 ];
 
 const journey = [
   ['Software Engineering', 'Built foundations in technology, automation and scalable systems.'],
-  ['MBA', 'Combined business acumen, technology and commercial problem-solving.'],
-  ['Data Analytics', 'Moved from raw information to business interpretation and decision support.'],
-  ['MSc', 'Combined business acumen, strategy, analytics and commercial problem-solving.'],
-  ['Apple Ops', 'Supported APAC operating rhythms, business reviews and regional governance.'],
+  ['MBA Operations & Analytics', 'Combined business acumen and translated data into executive recommendations.'],
+  ['MSc Data Science','Deepened expertise in machine learning, analytics systems and AI applications.'],
+  ['Biz Ops', 'Supporting operating rhythms, commercial governance and leadership decisions.'],
   ['AI Strategy', 'Building AI-powered workflows that reduce manual effort and improve decision velocity.'],
 ];
 
