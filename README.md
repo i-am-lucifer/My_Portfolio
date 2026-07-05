@@ -1,8 +1,17 @@
-# Logeshwaran I Portfolio — Phase 2
+# Logeshwaran I Portfolio — Phase 3
 
 White premium Next.js portfolio for GitHub Pages.
 
-## Phase 2 added
+## Phase 3 added
+
+- AI Portfolio Copilot: "Ask Logesh AI"
+- Floating recruiter Q&A chatbot
+- Local portfolio intelligence using structured experience, project, journey and skill data
+- GenAI-ready `/api/chat` fallback architecture for future Vercel/OpenAI integration
+- AI interaction analytics events through PostHog when available
+- New AI Portfolio Copilot business impact card
+
+## Phase 2 included
 
 - Client-side analytics tracker
 - PostHog-ready configuration
@@ -22,8 +31,6 @@ White premium Next.js portfolio for GitHub Pages.
 ```js
 posthogKey: 'phc_your_key_here'
 ```
-
-5. Commit the change.
 
 PostHog project API keys are public browser keys, not private OpenAI-style secrets.
 
