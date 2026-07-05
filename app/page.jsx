@@ -29,7 +29,7 @@ export default function Home() {
           <a href="#experience" data-track="nav_experience">Experience</a>
           <a href="#projects" data-track="nav_projects">Projects</a>
           <a href="#contact" data-track="nav_contact">Contact</a>
-          <button className="navAiButton" type="button" onClick={() => window.dispatchEvent(new Event('open-ai-chat'))}>Ask Loki</button>
+          <button className="navAiButton" type="button" onClick={() => window.dispatchEvent(new Event('open-ai-chat'))}>Ask AI</button>
         </div>
       </nav>
 
