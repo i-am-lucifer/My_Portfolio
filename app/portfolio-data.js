@@ -81,13 +81,13 @@ export const projects = [
     solution: 'Developed a predictive model identifying 1.3M likely buyers from 10M customers, reducing campaign spend by 40–50%.',
     stack: ['Predictive Analytics', 'Machine Learning', 'SQL', 'Hive', 'Hadoop'],
   },
-  {
-    number: '04',
-    title: 'AI Portfolio Copilot',
-    challenge: 'Recruiters and hiring teams often need fast answers about fit, impact and skills without reading every section of a portfolio.',
-    solution: 'Built a hybrid AI chatbot experience with local portfolio intelligence, recruiter-ready prompts, analytics tracking and a GenAI-ready API fallback architecture.',
-    stack: ['Next.js', 'React', 'AI UX', 'Local RAG', 'PostHog Analytics'],
-  },
+  // {
+  //   number: '04',
+  //   title: 'AI Portfolio Copilot',
+  //   challenge: 'Recruiters and hiring teams often need fast answers about fit, impact and skills without reading every section of a portfolio.',
+  //   solution: 'Built a hybrid AI chatbot experience with local portfolio intelligence, recruiter-ready prompts, analytics tracking and a GenAI-ready API fallback architecture.',
+  //   stack: ['Next.js', 'React', 'AI UX', 'Local RAG', 'PostHog Analytics'],
+  // },
 ];
 
 export const journey = [
