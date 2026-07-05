@@ -196,7 +196,7 @@ h2 {
   border-radius: 46px;
   padding: clamp(30px, 5vw, 64px);
   box-shadow: 0 44px 90px rgba(0,0,0,0.20);
-  min-height: 560px;
+  min-height: 620px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -412,10 +412,11 @@ h2 {
   }
 
   .experienceCard {
-    min-height: auto;
-    border-radius: 30px;
-    padding: 28px;
-  }
+  height: auto;
+  min-height: auto;
+  border-radius: 30px;
+  padding: 28px;
+}
 
   .experienceTop {
     flex-direction: column;
