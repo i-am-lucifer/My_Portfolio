@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { experiences, journey, projects, skills, profileSummary } from './portfolio-data';
 
 const starterQuestions = [
-  'Why should we hire Logesh?',
   'Summarize his AI experience.',
   'What business impact has he delivered?',
   'Which roles is he a strong fit for?',
@@ -14,7 +13,7 @@ const initialMessages = [
   {
     role: 'assistant',
     text:
-      "Hi, I'm Logesh AI. Ask me about Logesh's experience, projects, skills, business impact or fit for Strategy, Operations, Data and AI roles.",
+      "Hi, I'm Loki's AI. Ask me about Logeshwaran's experience, projects, skills, business impact or fit for Strategy, Operations, Data and AI roles.",
   },
 ];
 
@@ -158,8 +157,8 @@ export default function AIChatbot() {
         <section className="aiPanel" aria-label="Ask Logesh AI chatbot">
           <div className="aiHeader">
             <div>
-              <span>Phase 3</span>
-              <h3>Ask Logesh AI</h3>
+              <span></span>
+              <h3>Ask Loki's AI</h3>
             </div>
             <button type="button" onClick={closeChat} aria-label="Close AI chat">
               ×
@@ -208,7 +207,7 @@ export default function AIChatbot() {
       {!isOpen && (
         <button type="button" className="aiLauncher" onClick={openChat} data-track="ai_chat_launcher">
           <span>✨</span>
-          Ask Logesh AI
+          Ask Loki's AI
         </button>
       )}
     </div>
