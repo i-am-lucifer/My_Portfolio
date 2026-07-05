@@ -431,3 +431,207 @@ h2 {
     padding: 28px;
   }
 }
+
+.navAiButton {
+  border: 1px solid var(--line);
+  background: var(--black);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.aiCopilot {
+  position: fixed;
+  right: clamp(16px, 3vw, 34px);
+  bottom: clamp(16px, 3vw, 34px);
+  z-index: 60;
+}
+
+.aiLauncher {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: var(--black);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 16px 20px;
+  font-weight: 950;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+
+.aiLauncher span {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
+.aiPanel {
+  width: min(430px, calc(100vw - 32px));
+  max-height: min(720px, calc(100vh - 32px));
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 34px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 34px 120px rgba(0,0,0,0.22);
+}
+
+.aiHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 22px 22px 16px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.aiHeader span {
+  display: block;
+  color: rgba(255,255,255,0.56);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 950;
+  margin-bottom: 8px;
+}
+
+.aiHeader h3 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: -0.06em;
+}
+
+.aiHeader button {
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.aiMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+  overflow-y: auto;
+}
+
+.aiMessage {
+  max-width: 88%;
+  border-radius: 22px;
+  padding: 13px 15px;
+  line-height: 1.55;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.aiMessage p {
+  margin: 0 0 8px;
+}
+
+.aiMessage p:last-child {
+  margin-bottom: 0;
+}
+
+.aiMessage.assistant {
+  align-self: flex-start;
+  background: var(--soft);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.aiMessage.user {
+  align-self: flex-end;
+  background: var(--black);
+  color: var(--white);
+}
+
+.aiStarters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 18px 14px;
+}
+
+.aiStarters button {
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 9px 11px;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.aiInputRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+.aiInputRow input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 13px 14px;
+  font: inherit;
+  outline: none;
+}
+
+.aiInputRow input:focus {
+  border-color: var(--black);
+}
+
+.aiInputRow button {
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.aiInputRow button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+@media (max-width: 680px) {
+  .aiCopilot {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .aiPanel {
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    border-radius: 26px;
+  }
+
+  .aiLauncher {
+    padding: 14px 16px;
+  }
+}
