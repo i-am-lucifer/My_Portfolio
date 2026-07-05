@@ -149,7 +149,7 @@ h2 {
   border-radius: 28px;
   padding: 30px;
 }
-.metricCard strong { display: block; font-size: 46px; letter-spacing: -0.07em; margin-bottom: 8px; }
+.metricCard strong { display: block; font-size: 46px; letter-spacing: -0.04em; margin-bottom: 8px; }
 .metricCard span { color: var(--muted); line-height: 1.55; }
 
 .introBlock, .projects { background: linear-gradient(180deg, #fff, #fafaf8); }
