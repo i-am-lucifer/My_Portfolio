@@ -74,7 +74,7 @@ function getLocalAnswer(question, knowledgeBase) {
     q.includes('profile')
   ) {
     return (
-      'Logeshwaran Inbaraj is a business operations and analytics professional with experience across technology, consulting and regional operations. ' +
+      'Logeshwaran is a business operations and analytics professional with experience across technology, consulting and regional operations. ' +
       'His journey connects software engineering, data analytics, business strategy and AI-enabled transformation. ' +
       'He focuses on turning complex business problems into structured insights, operating rhythms and practical technology-enabled solutions.'
     );
