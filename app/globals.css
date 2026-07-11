@@ -485,9 +485,10 @@ h2 {
 
 .aiPanel {
   width: min(430px, calc(100vw - 32px));
+  height: min(720px, calc(100vh - 32px));
   max-height: min(720px, calc(100vh - 32px));
   display: grid;
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto minmax(120px, 1fr) auto auto;
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 34px;
@@ -573,60 +574,70 @@ h2 {
 }
 
 .aiStarters {
-  display: flex;
+  display: grid;
   gap: 8px;
-  overflow-x: auto;
+  max-height: 210px;
+  overflow-y: auto;
   padding: 4px 18px 14px;
 }
 
 .aiStarters button {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: 11px 13px;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.aiStarters button:hover {
+  background: var(--soft);
+  border-color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.aiGuideFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--white);
+}
+
+.aiGuideFooter span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.aiGuideFooter button {
   flex: 0 0 auto;
   border: 1px solid var(--line);
   background: var(--white);
   color: var(--ink);
   border-radius: 999px;
-  padding: 9px 11px;
+  padding: 9px 13px;
   font-size: 12px;
-  font-weight: 850;
+  font-weight: 900;
   cursor: pointer;
 }
 
-.aiInputRow {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  padding: 14px;
-  border-top: 1px solid var(--line);
-  background: #fff;
+.aiGuideFooter button:hover {
+  background: var(--soft);
 }
 
-.aiInputRow input {
-  width: 100%;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 13px 14px;
-  font: inherit;
-  outline: none;
-}
 
-.aiInputRow input:focus {
-  border-color: var(--black);
-}
-
-.aiInputRow button {
-  border: 1px solid var(--black);
-  background: var(--black);
-  color: var(--white);
-  border-radius: 999px;
-  padding: 0 18px;
-  font-weight: 950;
-  cursor: pointer;
-}
-
-.aiInputRow button:disabled {
-  opacity: 0.42;
-  cursor: not-allowed;
-}
 
 @media (max-width: 680px) {
   .aiCopilot {
@@ -643,4 +654,17 @@ h2 {
   .aiLauncher {
     padding: 14px 16px;
   }
+
+  .aiStarters {
+  max-height: 180px;
+}
+
+  .aiHeader h3 {
+  font-size: 22px;
+}
+
+  .aiGuideFooter {
+  padding: 12px 14px;
+}
+  
 }
