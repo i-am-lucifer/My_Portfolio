@@ -18,43 +18,45 @@ export const experiences = [
     location: 'Singapore',
     period: 'Aug 2025 – Present',
     summary:
-      'Strategic business partner to regional leadership, delivering operational intelligence, commercial insights and AI-enabled decision support across APAC Retail Customer Care.',
+      'Partnering with APAC leadership to deliver operational intelligence, executive reporting and AI-enabled decision support across Retail Customer Care.',
     metrics: ['8 APAC Markets', '10+ Stakeholders', '96% Reporting Time Reduction'],
     highlights: [
-      'Own RPAC Sales Weekly and Quarterly Business Reviews across 8 APAC markets.',
-      'Partner with Sales, Workforce Planning and Vendor Management to analyze demand trends, utilization and commercial performance.',
-      'Built AI-enabled reporting automation using Python, Snowflake, Tableau and enterprise AI.',
-      'Supported NPI, Apple Shopping Events and Back-to-School campaign readiness.',
+      'Owned Weekly and Quarterly Business Reviews across 8 APAC markets.',
+      'Delivered commercial, workforce and operational insights for regional leadership.',
+      'Built AI-enabled reporting automation using Python, Snowflake and Tableau.',
+      'Supported major product launches and seasonal business readiness initiatives.',
     ],
   },
+
   {
     company: 'Tredence',
     role: 'Data Analytics Consultant – Walmart Marketing Analytics',
     location: 'Bengaluru, India',
     period: 'Jun 2021 – Aug 2023',
     summary:
-      'Enabled Walmart marketing leadership with predictive analytics, customer intelligence and campaign performance insights to improve customer growth and investment decisions.',
+      'Delivered predictive analytics and customer intelligence to improve marketing performance and investment decisions for Walmart.',
     metrics: ['10M Customers', '1.3M Likely Buyers', '40–50% Spend Reduction'],
     highlights: [
-      'Analyzed customer behavior across Walmart+ and non-member segments.',
-      'Advised marketing leadership on campaign performance, retention, revenue and AOV.',
-      'Developed predictive targeting model with 72% accuracy.',
-      'Mentored two analysts across multiple business initiatives.',
+      'Analyzed customer behaviour across Walmart+ and non-member segments.',
+      'Built predictive targeting models with 72% campaign accuracy.',
+      'Advised marketing teams using campaign, revenue and retention insights.',
+      'Mentored analysts while supporting multiple strategic initiatives.',
     ],
   },
+
   {
     company: 'Accenture',
-    role: 'Application Development Associate – Telecommunications Client',
+    role: 'Application Development Associate – Singtel Optus',
     location: 'Chennai, India',
     period: 'Oct 2015 – Feb 2018',
     summary:
-      'Improved operational efficiency through automation, reporting accuracy and workflow optimization for a telecommunications client.',
-    metrics: ['90% Reporting Accuracy', '4 Hours Saved', 'Python Automation'],
+      'Built automation solutions that improved reporting quality, operational efficiency and business process execution.',
+    metrics: ['90% Reporting Accuracy', '4 Hours/Week Saved', 'Python Automation'],
     highlights: [
-      'Automated operational reporting using Python.',
+      'Automated operational reporting using Python-based solutions.',
       'Improved reporting accuracy to approximately 90%.',
-      'Reduced operational turnaround time by approximately 4 hours.',
-      'Built strong foundation in systems, process improvement and automation.',
+      'Reduced operational turnaround time by nearly four hours.',
+      'Developed a strong foundation in automation and process improvement.',
     ],
   },
 ];
